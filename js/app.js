@@ -1,7 +1,8 @@
 $(function(){
 
   var picturesUrl = 'https://images-api.nasa.gov/search?keywords=space,earth,planet';
-  var firstSection = $('#first');
+  var firstSection = $('.first');
+  var marsUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=JT7zPWwBHu6sJnEJjzNDX5TmpxTqgIRDv08Ncm9Q';
 
   $.ajax({
       url: picturesUrl,
