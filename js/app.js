@@ -24,7 +24,7 @@ $(function(){
   })
 
   var marsUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=JT7zPWwBHu6sJnEJjzNDX5TmpxTqgIRDv08Ncm9Q';
-  var gallery = $('.gallery');
+
 
   $.ajax({
     url: marsUrl,
@@ -32,6 +32,10 @@ $(function(){
     dataType: 'json'
   }).done(function(response){
     console.log(response.photos[0]);
+    var img_src = response.photos[0].img_src;
+    var imageMars = $('<img src = '+ img_src +'>');
+    var gallery = $('.gallery');
+    gallery.append(imageMars);
     }).fail(function(error){
     console.log(error);
   })
