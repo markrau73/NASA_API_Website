@@ -43,8 +43,24 @@ h2 {
   height: 100vh;
 }
 
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li img {
+  width: 600px;
+  height: 600px;
+}
+
+.second_ul {
+  margin-top: 23px;
+}
+
 .button{
-  margin-top: 150px;
+  margin-top: 330px;
   display: flex;
   flex-direction: row;
   justify-content: center;
