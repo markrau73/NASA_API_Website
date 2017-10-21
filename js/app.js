@@ -32,32 +32,65 @@ $(function(){
     dataType: 'json'
   }).done(function(response){
 
-    var imageMars1 = $('<img src = '+ response.photos[Math.floor(Math.random()*10)].img_src +'>');
+    var imageMars1 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
     var image1 = $('.first_ul').find('li').eq(0);
     image1.append(imageMars1);
 
-    var imageMars2 = $('<img src = '+ response.photos[Math.floor(Math.random()*10)].img_src +'>');
+    var imageMars2 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
     var image2 = $('.first_ul').find('li').eq(1);
     image2.append(imageMars2);
 
-    var imageMars3 = $('<img src = '+ response.photos[Math.floor(Math.random()*10)].img_src +'>');
+    var imageMars3 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
     var image3 = $('.first_ul').find('li').eq(2);
     image3.append(imageMars3);
 
-    var imageMars4 = $('<img src = '+ response.photos[Math.floor(Math.random()*10)].img_src +'>');
+    var imageMars4 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
     var image4 = $('.second_ul').find('li').eq(0);
     image4.append(imageMars4);
 
-    var imageMars5 = $('<img src = '+ response.photos[Math.floor(Math.random()*10)].img_src +'>');
+    var imageMars5 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
     var image5 = $('.second_ul').find('li').eq(1);
     image5.append(imageMars5);
 
-    var imageMars6 = $('<img src = '+ response.photos[Math.floor(Math.random()*10)].img_src +'>');
+    var imageMars6 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
     var image6 = $('.second_ul').find('li').eq(2);
     image6.append(imageMars6);
+
+    var imageMars7 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
+    var image7 = $('.third_ul').find('li').eq(0);
+    image7.append(imageMars7);
+
+    var imageMars8 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
+    var image8 = $('.third_ul').find('li').eq(1);
+    image8.append(imageMars8);
+
+    var imageMars9 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
+    var image9 = $('.third_ul').find('li').eq(2);
+    image9.append(imageMars9);
+
+    var imageMars10 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
+    var image10 = $('.fourth_ul').find('li').eq(0);
+    image10.append(imageMars10);
+
+    var imageMars11 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
+    var image11 = $('.fourth_ul').find('li').eq(1);
+    image11.append(imageMars11);
+
+    var imageMars12 = $('<img src = '+ response.photos[Math.floor(Math.random()*response.photos.length)].img_src +'>');
+    var image12 = $('.fourth_ul').find('li').eq(2);
+    image12.append(imageMars12);
 
   }).fail(function(error){
   console.log(error);
 })
+
+var button = $('button');
+var hiddenGallery = $('.hidden-gallery');
+
+button.on('click', function(){
+  hiddenGallery.css('display', 'block');
+  button.css('display', 'none');
+})
+
 
 });
