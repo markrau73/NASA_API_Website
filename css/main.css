@@ -57,6 +57,13 @@ ul {
   justify-content: space-between;
 }
 
+@media(max-width: 700px){
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 li img {
   width: 600px;
   height: 600px;
@@ -67,10 +74,16 @@ li img {
 }
 
 .button{
-  margin-top: 330px;
+  margin-top: 350px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+@media(max-width: 700px){
+  .button {
+    margin-top: 3050px;
+  }
 }
 
 button {
@@ -78,7 +91,7 @@ button {
   margin-bottom: 50px;
   align-self: center;
   height: 70px;
-  width: 350px;
+  width: 280px;
   border-radius: 10px;
   font-size: 20px;
   color: white;
