@@ -32,8 +32,6 @@ $(function(){
     dataType: 'json'
   }).done(function(response){
 
-
-
     var random = Math.floor(Math.random()*response.photos.length);
 
     var imageMars1 = $('<img src = '+ response.photos[random].img_src +'>');
